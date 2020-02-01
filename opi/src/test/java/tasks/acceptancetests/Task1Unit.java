@@ -4,17 +4,18 @@ import org.junit.After;
 import org.junit.Before;
 // import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.Assert;
 
 import java.util.ArrayList;
 // import java.util.Iterator;
 
 import static utils.utils.*;
 import unitTest.TestedClass;
-import  unitTest.Generator;
-import org.junit.Assert;
+import unitTest.Generator;
 
 
-public class Task1 {
+
+public class Task1Unit {
 
     // @BeforeClass
     // public static void ba(){
@@ -41,10 +42,10 @@ public class Task1 {
     @Test
     public void secondTest() {
         //if I didn't implement Generator I would go through the list
-        //and count number of occurrences of even numbers
-        //if that number is greater than 0 test fails
+        //and count the number of occurrences of even numbers
+        //if that number is greater than 0 the test fails
         //thats why java.util.Iterator is in the imports
-        
+
         log("Testing method with a list of consecutive integers");
         ArrayList<Integer> results = TestedClass.testMe(integersList);
         Assert.assertEquals(Generator.getIntList("odd", 5), results);

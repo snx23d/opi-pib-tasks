@@ -6,7 +6,7 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Task1 test runner",
+            "name": "Task test runner (unit)",
             "request": "launch",
             "mainClass": "tasks.acceptancetests.TestRunner",
             "projectName": "opi"

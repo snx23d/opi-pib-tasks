@@ -10,7 +10,11 @@ import static utils.utils.*;
 
 public class TestRunner {
    public static void main(String[] args) {
-      Result result = JUnitCore.runClasses(Task1.class);
+      Class[] classes = {
+         Task1Unit.class,
+         Task2Unit.class
+      };
+      Result result = JUnitCore.runClasses(classes);
       
       for (Failure failure : result.getFailures()) {
          log("failures: " + failure.toString());
