@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import unitTest.TestedClass;
+import utils.utils;
 
 public class HooksUnit {
 
@@ -14,11 +15,12 @@ public class HooksUnit {
     }
 
     @Before
-    public void openWebSite() {
+    public void before() {
+        utils.log("ggg");
     }
 
     @After
-    public void closeSession() {
-
+    public void after() {
+        utils.log("kkkk");
     }
 }

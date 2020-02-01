@@ -4,9 +4,9 @@ import javax.inject.Inject;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.But;
+// import cucumber.api.java.en.When;
+// import cucumber.api.java.en.And;
+// import cucumber.api.java.en.But;
 
 import unitTest.TestedClass;
 
@@ -19,11 +19,27 @@ public class StepsUnit {
     @Inject
     private TestedClass testedClass;//tested method
 
-    @Given("^I search for \"([^\"]*)\"$")
-    public void i_search_for(String arg1) {
+    @Given("^I run the method with empty list$")
+    public void i_run_the_method_with_empty_list() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
     }
 
-    @Then("^I google should show me results!$")
-    public void i_google_should_show_me_results() {
+    @Then("^I get the empty list back$")
+    public void i_get_the_empty_list_back() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
+    }
+
+    @Given("^I run the method with complete list$")
+    public void i_run_the_method_with_complete_list() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
+    }
+
+    @Then("^I get the list with only even numbers$")
+    public void i_get_the_list_with_only_even_numbers() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
     }
 }
