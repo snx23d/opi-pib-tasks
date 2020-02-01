@@ -13,9 +13,9 @@ public class TestRunner {
       Result result = JUnitCore.runClasses(Task1.class);
 		
       for (Failure failure : result.getFailures()) {
-         log(failure.toString());
+         log("failures: " + failure.toString());
       }
 		
-      log(result.wasSuccessful());
+      log("wasSuccessful: " + result.wasSuccessful());
    }
 } 

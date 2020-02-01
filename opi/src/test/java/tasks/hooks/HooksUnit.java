@@ -6,7 +6,7 @@ import javax.inject.Inject;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import unitTest.TestedClass;
-import utils.utils;
+import static utils.utils.*;
 
 public class HooksUnit {
 
