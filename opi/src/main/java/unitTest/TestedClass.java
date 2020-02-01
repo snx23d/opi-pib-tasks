@@ -8,7 +8,7 @@ public class TestedClass {
     /**
      * Tested method that returns Integer list with odd values only
      */
-    static ArrayList<Integer> testMe(ArrayList<Integer> list){
+    public static ArrayList<Integer> testMe(ArrayList<Integer> list){
 
         ArrayList<Integer> outputList = new ArrayList<Integer>();
         Iterator<Integer> iterator = list.iterator();

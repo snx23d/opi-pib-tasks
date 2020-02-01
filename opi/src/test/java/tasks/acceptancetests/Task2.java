@@ -11,28 +11,28 @@ import cucumber.api.junit.Cucumber;
 
 // @RunWith(Cucumber.class)
 // @CucumberOptions(
-//         glue = {"tasks"},
-//         features = ".",
-//         format = {"pretty", "json:target/cucumber-reports/cucumber.json"},
-//         tags = {"@complete"}
-
+//     glue = {"tasks"},
+//     features = ".",
+//     format = {"pretty", "json:target/cucumber-reports/cucumber.json"},
+//     tags = {"@complete"}
 // )
+
 public class Task2 {
 
-        // @Before
-        // public void ggg(){
-        //         log("ggg allll");
-        // }
+    // @Before
+    // public void ggg(){
+    //     log("ggg allll");
+    // }
 
-        @Test
-        public void fff() {
-                log("hhhh allll");
-        }
+    @Test
+    public void fff() {
+        log("hhhh allll");
+    }
 
-        @After
-        public void hhh(){
-                log("hkkkkkkkkkkkhhallllll");
-        }
+    @After
+    public void hhh(){
+        log("hkkkkkkkkkkkhhallllll");
+    }
 
-        
+    
 }
