@@ -4,24 +4,33 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Task1 test runner",
+            "request": "launch",
+            "mainClass": "tasks.acceptancetests.TestRunner",
+            "projectName": "opi"
+        },
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "${file}",
+            "projectName": "opi"
         },
         {
             "type": "java",
             "name": "Debug main",
             "request": "launch",
-            "mainClass": "test.acceptancetests.AllTests"
+            "mainClass": "test.acceptancetests.Task2",
+            "projectName": "opi"
         },
         {
             "type": "java",
             "name": "Debug Current File",
             "request": "launch",
-            "mainClass": "${}"
-        },
+            "mainClass": "${}",
+            "projectName": "opi"
+        }
     ]
 }

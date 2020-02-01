@@ -9,8 +9,9 @@ import cucumber.api.java.en.Given;
 // import cucumber.api.java.en.But;
 
 import unitTest.TestedClass;
+import unitTest.Generator;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Assert;
 
 
 

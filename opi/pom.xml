@@ -179,7 +179,7 @@
             </activation>
             <properties>
                 <failsafe.fork.count>1</failsafe.fork.count>
-                <classes>**/AllTests.java</classes>
+                <classes>**/Task2.java</classes>
             </properties>
         </profile>
         <profile>

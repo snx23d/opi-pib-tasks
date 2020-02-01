@@ -12,7 +12,7 @@ public class Generator {
      * @param length list length
      * @throws ArrayIndexOutOfBoundsException
      */
-    static ArrayList<Integer> getIntList(String modifier, int length) {
+    public static ArrayList<Integer> getIntList(String modifier, int length) {
 
         if (length < 0) {
             throw new ArrayIndexOutOfBoundsException("getIntList: length cannot be less than 0");
