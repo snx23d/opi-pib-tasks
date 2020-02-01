@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "verify",
+            "type": "shell",
+            "command": "cd opi && mvn -B verify",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher":"$eslint-stylish"
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "cd opi && mvn -B test",
+            "group": "test"
+        },
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "cd opi && mvn -B compile",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
