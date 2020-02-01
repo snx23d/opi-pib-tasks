@@ -18,7 +18,7 @@ public class Task1 {
 
         // @BeforeClass
         // public static void ba(){
-        //         utils.log("BeforeClass1");
+        //         log("BeforeClass1");
         // }
 
         private ArrayList<Integer> emptyList;
@@ -26,7 +26,7 @@ public class Task1 {
 
         @Before
         public void startTest1(){
-                utils.log("Executing Task1");
+                log("Executing Task1");
                 this.emptyList = getIntList("all", 0);
                 this.allNumbersList = getIntList("all", 10);
 
@@ -35,16 +35,16 @@ public class Task1 {
 
         @Test
         public void fff() {
-                utils.log("hhhhTask1");
+                log("hhhhTask1");
         }
 
         public void fff1() {
-                utils.log("hhhh11Task1");
+                log("hhhh11Task1");
         }
 
         @After
         public void hhh(){
-                utils.log("Task1 finished");
+                log("Task1 finished");
         }
 
         

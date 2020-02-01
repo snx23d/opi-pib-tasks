@@ -17,12 +17,12 @@ public class HooksUnit {
 
     @Before
     public void before() {
-        utils.log("ggg");
+        log("ggg");
     }
 
 
     @After
     public void after() {
-        utils.log("kkkk");
+        log("kkkk");
     }
 }
