@@ -41,7 +41,10 @@ public class Task1 {
     @Test
     public void secondTest() {
         //if I didn't implement Generator I would go through the list
-        //and count 
+        //and count number of occurrences of even numbers
+        //if that number is greater than 0 test fails
+        //thats why java.util.Iterator is in the imports
+        
         log("Testing method with a list of consecutive integers");
         ArrayList<Integer> results = TestedClass.testMe(integersList);
         Assert.assertEquals(Generator.getIntList("odd", 5), results);

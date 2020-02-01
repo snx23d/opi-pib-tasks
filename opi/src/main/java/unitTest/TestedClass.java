@@ -14,8 +14,7 @@ public class TestedClass {
         Iterator<Integer> iterator = list.iterator();
 
         while (iterator.hasNext()) {
-            Integer listElement = iterator.next();
-            int value = listElement.intValue();
+            int value = iterator.next().intValue();
             
             if (value % 2 == 1) {
                 outputList.add(value);
