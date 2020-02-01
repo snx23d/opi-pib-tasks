@@ -54,20 +54,6 @@ public class WebDriverProvider implements Provider<WebDriver> {
             driver = new RemoteWebDriver(new DesiredCapabilities());
             break;
         case "chrome":
-
-            // ChromeDriverService service = new ChromeDriverService
-            //     .Builder()
-            //     .usingDriverExecutable(new File("chromedriver.exe"))
-            //     .usingAnyFreePort()
-            //     .build();
-            // try {
-            //     service.start();
-            // } catch (IOException e) {
-            //     // TODO Auto-generated catch block
-            //     e.printStackTrace();
-            // }
-            //     // opt.
-            //     driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
                 driver = new ChromeDriver();
                 break;
 
@@ -75,8 +61,6 @@ public class WebDriverProvider implements Provider<WebDriver> {
                 driver = new ChromeDriver();
         }
 
-        // counter++;
-        // System.out.println("counter = " + counter);
         return driver;
     }
 }

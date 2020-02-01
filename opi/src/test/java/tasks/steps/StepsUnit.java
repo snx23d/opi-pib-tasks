@@ -9,7 +9,7 @@ import cucumber.api.java.en.Given;
 
 import static org.junit.Assert.assertEquals;
 
-public class ExampleSteps {
+public class StepsUnit {
 
     @Inject
     private WebDriver webDriver;
