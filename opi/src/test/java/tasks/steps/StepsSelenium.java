@@ -14,11 +14,11 @@ public class StepsSelenium {
     @Inject
     private WebDriver webDriver;
 
-    @Given("^I search for \"([^\"]*)\"$")
-    public void i_search_for(String arg1) {
+    @Given("^jjjI search for \"([^\"]*)\"$")
+    public void gggi_search_for(String arg1) {
     }
 
-    @Then("^I google should show me results!$")
-    public void i_google_should_show_me_results() {
+    @Then("^hhhI google should show me results!$")
+    public void gggi_google_should_show_me_results() {
     }
 }
