@@ -1,11 +1,13 @@
 package tasks.pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.WebElement;
 // import org.openqa.selenium.support.FindBy;
 // import org.openqa.selenium.support.PageFactory;
-// import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebElement;
 
 public class MainPage extends BasePage {
 
@@ -16,13 +18,13 @@ public class MainPage extends BasePage {
 
     // @FindBy(css = "ul#homefeatured > li div.product-image-container > a.quick-view")
     // WebElement productQuickView;
-    public final By product = 
-        By.cssSelector("ul#homefeatured > li div.product-image-container > a.quick-view");//mouseover, click
+    private final By productQuickView = 
+        By.cssSelector("a.quick-view");//mouseover, click
 
-    // @FindBy(css = "ul#homefeatured > li div.product-image-container > a.product_img_link")
+    // @FindBy(css = "a.product_img_link")
     // WebElement productLink;
-    public final By productLink = 
-        By.cssSelector("ul#homefeatured > li div.product-image-container > a.product_img_link");//click
+    private final By productLink = 
+        By.cssSelector("a.product_img_link");//click
     
     // @FindBy(css = "ul#homefeatured > li div.product-image-container")
     // WebElement productContainer;
@@ -30,7 +32,7 @@ public class MainPage extends BasePage {
         By.cssSelector("ul#homefeatured > li div.product-image-container");//click
 
 
-    public final By loading = 
+    private final By loading = 
         By.cssSelector("div.fancybox-loading > div");//stales
 
 
@@ -41,5 +43,10 @@ public class MainPage extends BasePage {
         waitForElementToStale(loading, 10);
     }
 
-    
+    public void showQuickViewOfProduct(int productIndex) {
+        List<WebElement> products = findAll(productContainer);
+        WebElement container = products.get(productIndex);
+        mouseover(container);
+        findIn(container, productQuickView).click();
+    }
 }

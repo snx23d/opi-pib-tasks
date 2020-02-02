@@ -101,6 +101,10 @@ public class BasePage {
         return element.findElement(bySelector);
     }
 
+    public List<WebElement> findAllIn(WebElement element, By bySelector) {
+        return element.findElements(bySelector);
+    }
+
     public void switchToDefaultPage() {
         driver.switchTo().defaultContent();
     }
