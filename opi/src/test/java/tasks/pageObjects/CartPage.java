@@ -16,8 +16,8 @@ public class CartPage extends BasePage {
         // PageFactory.initElements(driver, this);
     }
 
-    private final By popup =
-        By.cssSelector("div#layer_cart[style*=\"display: block\"]");
+    private final By cartSummaryTable =
+        By.cssSelector("table#cart_summary");
 
 
 }

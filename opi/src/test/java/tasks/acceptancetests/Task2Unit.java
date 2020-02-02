@@ -10,15 +10,15 @@ import org.junit.Assert;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
+// import org.openqa.selenium.By;
+// import org.openqa.selenium.Keys;
+// import org.openqa.selenium.support.ui.WebDriverWait;
+// import org.openqa.selenium.support.FindBy;
+// import org.openqa.selenium.support.ui.ExpectedConditions;
+// import org.openqa.selenium.support.PageFactory;
+// import org.openqa.selenium.JavascriptExecutor;
+// import org.openqa.selenium.interactions.Action;
+// import org.openqa.selenium.interactions.Actions;
 
 
 
@@ -38,12 +38,8 @@ public class Task2Unit {
 
     private WebDriver driver;
 
-    private MainPage mainPage;
-    private QuickView quickView;
-    private CartPreviewPage cartPreview;
-
     private final int productNumberToAddToCart = 2;
-    
+    private String productName;
 
 
 
@@ -57,29 +53,19 @@ public class Task2Unit {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-        mainPage = new MainPage(driver);
-        quickView = new QuickView(driver);
-        cartPreview = new CartPreviewPage(driver);
-
     }
 
     @Test
     public void navigateToMainPage() {
         log("Navigate to site main page");
         driver.get("http://automationpractice.com/index.php");
-        mainPage.waitUntilElementLocated(mainPage.productContainer, 10);
-    }
-
-    @Test
-    public void navigateToMainPage1() {
-        log("Navigate to site main page");
-        driver.get("http://automationpractice.com/index.php");
-        mainPage.waitUntilElementLocated(mainPage.productContainer, 10);
     }
 
     @Test
     public void clickQuickView() {
         log("Quick view 2nd product details and click it");
+        MainPage mainPage = new MainPage(driver);
+        mainPage.waitUntilElementLocated(mainPage.productContainer, 10);
         List<WebElement> products = mainPage.findAll(mainPage.product);
         mainPage.mouseover(products.get(this.productNumberToAddToCart));
         mainPage.waitUntilElementVisible(mainPage.productLink, 5).click();
@@ -87,9 +73,11 @@ public class Task2Unit {
     }
 
     @Test
-    public void navigateToMa() {
+    public void addProductToCart() {
         log("Add the product to cart");
+        QuickView quickView = new QuickView(driver);
         quickView.switchToFrame();
+        productName = quickView.getProductName();
         quickView.addToCart();
         quickView.switchToDefaultPage();
     }
@@ -97,15 +85,17 @@ public class Task2Unit {
     @Test
     public void checkCartPreview() {
         log("Check cart preview");
+        CartPreviewPage cartPreview = new CartPreviewPage(driver);
         String cartInfo = cartPreview.getCartInfo();
         String expected = "There is 1 item in your cart.";
+        cartPreview.proceedToCheckout();
         Assert.assertEquals(expected, cartInfo);
     }
 
     @Test
-    public void proceedToCheckout() {
+    public void ffffffffff() {
         log("Go to checkout");
-        cartPreview.proceedToCheckout();
+        
     }
 
     @After

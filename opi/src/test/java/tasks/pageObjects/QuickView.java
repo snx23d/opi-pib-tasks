@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.WebElement;
+// import org.openqa.selenium.WebElement;
 
 public class QuickView extends BasePage {
 
@@ -26,6 +26,9 @@ public class QuickView extends BasePage {
     private final By addToCart = 
         By.cssSelector("button[type=\"submit\"]");//click
 
+    private final By productName =
+        By.cssSelector("'h1[itemprop=\"name\"]");
+
 
 
     public void switchToFrame() {
@@ -37,5 +40,9 @@ public class QuickView extends BasePage {
         find(addToCart).click();
         super.waitForElementToStale(iframe, iframeTimeout);
 
+    }
+
+    public String getProductName() {
+        return find(productName).getText();
     }
 }

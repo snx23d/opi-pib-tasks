@@ -1,6 +1,6 @@
 package tasks.steps;
 
-import javax.inject.Inject;
+// import javax.inject.Inject;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.Given;
@@ -8,17 +8,17 @@ import cucumber.api.java.en.Given;
 // import cucumber.api.java.en.And;
 // import cucumber.api.java.en.But;
 
-import unitTest.TestedClass;
-import unitTest.Generator;
+// import unitTest.TestedClass;
+// import unitTest.Generator;
 
-import org.junit.Assert;
+// import org.junit.Assert;
 
 
 
 public class StepsUnit {
 
-    @Inject
-    private TestedClass testedClass;//tested method
+    // @Inject
+    // private TestedClass testedClass;//tested method
 
     @Given("^I run the method with empty list$")
     public void i_run_the_method_with_empty_list() throws Throwable {

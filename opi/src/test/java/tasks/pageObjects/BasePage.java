@@ -79,6 +79,11 @@ public class BasePage {
         wait.until(ExpectedConditions.stalenessOf(element));
     }
 
+    /**
+     * Waits until element becomes stale
+     * @param element
+     * @param timeout
+     */
     public void waitForElementToStale(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.stalenessOf(element));

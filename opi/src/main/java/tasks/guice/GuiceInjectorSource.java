@@ -1,10 +1,10 @@
 package tasks.guice;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
+// import com.google.inject.Guice;
+// import com.google.inject.Injector;
 
-import cucumber.api.guice.CucumberModules;
-import cucumber.runtime.java.guice.InjectorSource;
+// import cucumber.api.guice.CucumberModules;
+// import cucumber.runtime.java.guice.InjectorSource;
 
 // public class GuiceInjectorSource implements InjectorSource {
 //     @Override
