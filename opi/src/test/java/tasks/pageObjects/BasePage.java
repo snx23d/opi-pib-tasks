@@ -46,7 +46,7 @@ public class BasePage {
      * @return WebElement
      */
     public WebElement waitUntilElementVisible(By bySelector, int timeout) {
-        WebDriverWait wait = new WebDriverWait(this.driver, timeout);
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(bySelector));
     }
 
@@ -56,7 +56,7 @@ public class BasePage {
      */
     public void mouseover(By bySelector) {
         WebElement element = waitUntilElementVisible(bySelector, defaultTimeout);
-        new Actions(this.driver).moveToElement(element).perform();
+        new Actions(driver).moveToElement(element).perform();
     }
 
     /**
@@ -64,7 +64,7 @@ public class BasePage {
      * @param WebElement
      */
     public void mouseover(WebElement element) {
-        new Actions(this.driver).moveToElement(element).perform();
+        new Actions(driver).moveToElement(element).perform();
     }
 
     /**
@@ -75,15 +75,30 @@ public class BasePage {
      */
     public void waitForElementToStale(By bySelector, int timeout) {
         WebElement element = waitUntilElementLocated(bySelector, timeout);
-        WebDriverWait wait = new WebDriverWait(this.driver, timeout);
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.stalenessOf(element));
+    }
+
+    public void waitForElementToStale(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.stalenessOf(element));
     }
 
     public List<WebElement> findAll(By bySelector) {
-        return this.driver.findElements(bySelector);
+        return driver.findElements(bySelector);
+    }
+
+    public WebElement find(By bySelector) {
+        return driver.findElement(bySelector);
+    }
+
+    public WebElement findIn(WebElement element, By bySelector) {
+        return element.findElement(bySelector);
     }
 
     public void switchToDefaultPage() {
-        this.driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent();
     }
+
+
 }

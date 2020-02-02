@@ -35,6 +35,8 @@ public class MainPage extends BasePage {
 
 
 
+
+
     public void waitForLoading() {
         waitForElementToStale(loading, 10);
     }

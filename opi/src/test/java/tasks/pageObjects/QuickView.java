@@ -23,14 +23,19 @@ public class QuickView extends BasePage {
     private final By iframe = 
         By.cssSelector("iframe");//click
 
-    public final By addToCart = 
+    private final By addToCart = 
         By.cssSelector("button[type=\"submit\"]");//click
 
 
+
     public void switchToFrame() {
-        WebDriverWait wait = new WebDriverWait(this.driver, iframeTimeout);
+        WebDriverWait wait = new WebDriverWait(driver, iframeTimeout);
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iframe));
     }
 
+    public void addToCart() {
+        find(addToCart).click();
+        super.waitForElementToStale(iframe, iframeTimeout);
 
+    }
 }

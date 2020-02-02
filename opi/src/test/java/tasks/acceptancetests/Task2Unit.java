@@ -29,6 +29,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static utils.utils.*;
 import tasks.pageObjects.MainPage;
 import tasks.pageObjects.QuickView;
+import tasks.pageObjects.CartPreviewPage;
 
 
 
@@ -39,7 +40,7 @@ public class Task2Unit {
 
     private MainPage mainPage;
     private QuickView quickView;
-
+    private CartPreviewPage cartPreview;
 
     private final int productNumberToAddToCart = 2;
     
@@ -58,7 +59,7 @@ public class Task2Unit {
 
         mainPage = new MainPage(driver);
         quickView = new QuickView(driver);
-        
+        cartPreview = new CartPreviewPage(driver);
 
     }
 
@@ -87,12 +88,24 @@ public class Task2Unit {
 
     @Test
     public void navigateToMa() {
-
+        log("Add the product to cart");
+        quickView.switchToFrame();
+        quickView.addToCart();
+        quickView.switchToDefaultPage();
     }
 
     @Test
-    public void navigateToMai() {
+    public void checkCartPreview() {
+        log("Check cart preview");
+        String cartInfo = cartPreview.getCartInfo();
+        String expected = "There is 1 item in your cart.";
+        Assert.assertEquals(expected, cartInfo);
+    }
 
+    @Test
+    public void proceedToCheckout() {
+        log("Go to checkout");
+        cartPreview.proceedToCheckout();
     }
 
     @After
