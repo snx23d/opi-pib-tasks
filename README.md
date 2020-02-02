@@ -6,6 +6,11 @@ opi\src\test\java\tasks\acceptancetests\TestRunner.java
 
 which runs tests from both tasks.
 
+Project is created using Google Chrome and chromedriver.exe which is present in
+
+opi\dependencies\chromedriver.exe
+
+
 I used VS Code IDE that I had at hand. Idea InteliJ or Eclipse probably would be
 better suitted for the job, but VS Code was perfectly fine here.
 
