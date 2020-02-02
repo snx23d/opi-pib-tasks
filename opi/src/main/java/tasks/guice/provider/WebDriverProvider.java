@@ -13,54 +13,54 @@ import org.openqa.selenium.safari.SafariDriver;
 import javax.inject.Provider;
 // import java.util.Optional;
 
-public class WebDriverProvider implements Provider<WebDriver> {
+// public class WebDriverProvider implements Provider<WebDriver> {
 
     // private int counter;
 
-    @Override
-    public WebDriver get() {
-        WebDriver driver = null;
-        // String browser =
-        // Optional.ofNullable(System.getProperty("browser")).orElse("");
-        String browser = "chrome";
-        System.setProperty("webdriver.chrome.driver", "dependencies/chromedriver.exe");
+    // @Override
+    // public WebDriver get() {
+    //     WebDriver driver = null;
+    //     // String browser =
+    //     // Optional.ofNullable(System.getProperty("browser")).orElse("");
+    //     String browser = "chrome";
+    //     System.setProperty("webdriver.chrome.driver", "dependencies/chromedriver.exe");
 
-        // System.out.println(
-        // "webdriver.chrome.driver"
-        // .concat(
-        // System.getProperty("webdriver.chrome.driver")
-        // )
-        // );
+    //     // System.out.println(
+    //     // "webdriver.chrome.driver"
+    //     // .concat(
+    //     // System.getProperty("webdriver.chrome.driver")
+    //     // )
+    //     // );
 
-        switch (browser.toLowerCase()) {
-        case "ie":
-        case "internet explorer":
-            driver = new InternetExplorerDriver();
-            break;
-        case "firefox":
-            driver = new FirefoxDriver();
-            break;
-        case "safari":
-            driver = new SafariDriver();
-            break;
-        case "opera":
-            driver = new OperaDriver();
-            break;
-        case "phantomjs":
-        case "headless":
-            driver = new PhantomJSDriver();
-            break;
-        case "remote":
-            driver = new RemoteWebDriver(new DesiredCapabilities());
-            break;
-        case "chrome":
-                driver = new ChromeDriver();
-                break;
+    //     switch (browser.toLowerCase()) {
+    //     case "ie":
+    //     case "internet explorer":
+    //         driver = new InternetExplorerDriver();
+    //         break;
+    //     case "firefox":
+    //         driver = new FirefoxDriver();
+    //         break;
+    //     case "safari":
+    //         driver = new SafariDriver();
+    //         break;
+    //     case "opera":
+    //         driver = new OperaDriver();
+    //         break;
+    //     case "phantomjs":
+    //     case "headless":
+    //         driver = new PhantomJSDriver();
+    //         break;
+    //     case "remote":
+    //         driver = new RemoteWebDriver(new DesiredCapabilities());
+    //         break;
+    //     case "chrome":
+    //             driver = new ChromeDriver();
+    //             break;
 
-            default:
-                driver = new ChromeDriver();
-        }
+    //         default:
+    //             driver = new ChromeDriver();
+    //     }
 
-        return driver;
-    }
-}
+    //     return driver;
+    // }
+// }
