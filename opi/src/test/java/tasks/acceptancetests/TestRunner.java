@@ -9,6 +9,8 @@ import static utils.utils.*;
 
 
 public class TestRunner {
+
+   private static final String ANSI_RED = "\u001B[31m";
    public static void main(String[] args) {
       Class[] classes = {
          Task1Unit.class,
@@ -17,7 +19,16 @@ public class TestRunner {
       Result result = JUnitCore.runClasses(classes);
       
       for (Failure failure : result.getFailures()) {
-         log("failures: " + failure.toString());
+         log(
+            "\n"+
+            "************************************************************************************************************" +
+            "\n"+
+            "failures: " +
+            failure.toString() +
+            "\n" +
+            "************************************************************************************************************" +
+            "\n"
+         );
       }
       
       log("wasSuccessful: " + result.wasSuccessful());

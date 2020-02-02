@@ -9,6 +9,10 @@ import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.WebElement;
 
+import static utils.utils.*;
+
+
+
 public class MainPage extends BasePage {
 
     public MainPage(WebDriver driver) {
@@ -33,13 +37,14 @@ public class MainPage extends BasePage {
 
 
     private final By loading = 
-        By.cssSelector("div.fancybox-loading > div");//stales
+        By.cssSelector("div#fancybox-loading > div");//stales
 
 
 
 
 
     public void waitForLoading() {
+        log("waitForLog");
         waitForElementToStale(loading, 10);
     }
 

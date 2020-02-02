@@ -20,19 +20,19 @@ import static utils.utils.*;
 public class Task2 {
 
     // @Before
-    // public void ggg(){
-    //     log("ggg allll");
+    // public void placeholder3(){
+    //     log("placeholder3");
     // }
 
-    @Test
-    public void fff() {
-        log("hhhh allll");
-    }
+    // @Test
+    // public void placeholder2() {
+    //     log("placeholder2");
+    // }
 
-    @After
-    public void hhh(){
-        log("hkkkkkkkkkkkhhallllll");
-    }
+    // @After
+    // public void placeholder1(){
+    //     log("placeholder1");
+    // }
 
     
 }

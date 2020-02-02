@@ -28,7 +28,7 @@ public class CartPreviewPage extends BasePage {
 
 
     private WebElement getPopup() {
-        return waitUntilElementVisible(popup, 10);
+        return waitUntilElementLocated(popup, 10);
     }
 
     public String getCartInfo() {

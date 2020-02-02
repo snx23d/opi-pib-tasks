@@ -41,7 +41,7 @@ public class Task2Unit {
     private final String testedURL = "http://automationpractice.com/index.php";
     private final int productNumberToAddToCart = 2;
     private final int expectedProductQuantity = 1;
-    private String productName;
+    private static String productName;
 
     @BeforeClass
     public static void before() {
@@ -58,7 +58,7 @@ public class Task2Unit {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        //explicit waits are used so no implicit wait timeout config
+        // explicit waits are used so no implicit wait timeout config
     }
 
     @Test
@@ -83,7 +83,7 @@ public class Task2Unit {
         quickView.switchToFrame();
         productName = quickView.getProductName();
         quickView.addToCart();
-        quickView.switchToDefaultPage();
+        quickView.waitForQuickViewToDisappear();
     }
 
     @Test
