@@ -27,8 +27,8 @@ public class MainPage extends BasePage {
 
     // @FindBy(css = "a.product_img_link")
     // WebElement productLink;
-    private final By productLink = 
-        By.cssSelector("a.product_img_link");//click
+    // private final By productLink = 
+    //     By.cssSelector("a.product_img_link");//click
     
     // @FindBy(css = "ul#homefeatured > li div.product-image-container")
     // WebElement productContainer;
